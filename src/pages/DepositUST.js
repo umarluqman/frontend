@@ -207,10 +207,10 @@ function DepositUST() {
                                     <div className="dark:text-white text-2xl font-bold mb-6">
                                         Add Liquidity
             </div>
-                                    <ApproveToken onType= {(e) => setUSDCBalance(e.target.value)} handleClick={() => approveUSDC()} name="USDC" logo={USDC} balance={usdcBalance} isApproved={USDCApproved}/>
-                                    <ApproveToken onType= {(e) => setFRAXBalance(e.target.value)} handleClick={() =>  approveFRAX()} name="FRAX" logo={FRAX} balance={fraxBalance} isApproved={FRAXApproved}/>
-                                    <ApproveToken onType= {(e) => setDAIBalance(e.target.value)} handleClick={() =>  approveDAI()} name="DAI" logo={DAI} balance={daiBalance} isApproved={DAIApproved}/>
-                                    <ApproveToken onType= {(e) => setUSDTBalance(e.target.value)} handleClick={() =>  approveUSDT()} name="USDT" logo={USDT} balance={usdtBalance} isApproved={USDTApproved}/>
+                                    <ApproveToken onType= {(e) => setUSDCBalance(e.target.value)} handleClick={() => approveUSDC()} name="USDC" logo={USDC} balance={usdcBalance} isApproved={USDCApproved} setBalance={setUSDCBalance}/>
+                                    <ApproveToken onType= {(e) => setFRAXBalance(e.target.value)} handleClick={() =>  approveFRAX()} name="FRAX" logo={FRAX} balance={fraxBalance} isApproved={FRAXApproved} setBalance={setFRAXBalance}/>
+                                    <ApproveToken onType= {(e) => setDAIBalance(e.target.value)} handleClick={() =>  approveDAI()} name="DAI" logo={DAI} balance={daiBalance} isApproved={DAIApproved} setBalance={setDAIBalance}/>
+                                    <ApproveToken onType= {(e) => setUSDTBalance(e.target.value)} handleClick={() =>  approveUSDT()} name="USDT" logo={USDT} balance={usdtBalance} isApproved={USDTApproved} setBalance={setUSDTBalance}/>
 
                                     <div className="transactionInfoItem ">
                                         <div className="slippage text-steel-300 text-sm ">

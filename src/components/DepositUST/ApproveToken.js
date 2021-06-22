@@ -91,6 +91,10 @@ function ApproveToken(props) {
 // //       }
     // }
 
+    const setMaxBalance = () => {
+        props.setBalance(props.balance)
+    }
+
     return (
     <div>
         <div className="overflow-hidden relative">
@@ -143,6 +147,17 @@ function ApproveToken(props) {
                         <span className="font-bold ml-2">{props.name}</span>
                     </div>
                 </div>
+                <div
+                className="z-10 absolute"
+                style={{
+                  top: 24,
+                  right: 0,
+                }}
+              >
+                <button className="focus:outline-none w-full font-bold px-3 text-white  py-3 rounded-lg shadow-sm bg-blue-400" onClick={setMaxBalance}>
+                 MAX
+                </button>
+              </div>
             </div>}
         </div> </div>
     </div>)
