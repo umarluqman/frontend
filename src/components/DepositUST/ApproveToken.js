@@ -91,8 +91,14 @@ function ApproveToken(props) {
 // //       }
     // }
 
+    const [value, setValue] = useState(0)
+
     const setMaxBalance = () => {
-        props.setBalance(props.balance)
+        setValue(props.balance)
+    }
+
+    const onChangeValue = (e) => {
+        setValue(e.target.value)
     }
 
     return (
@@ -135,7 +141,7 @@ function ApproveToken(props) {
                     <br/>
                 </div>:
                 <div>
-                <input onChange={props.onType} type="number" className="dark:text-white border rounded-md focus:outline-none dark:bg-dark-600 dark:border-0 bg-steel-100 p-2 pl-32 h-12 w-full" placeholder={0} defaultValue />
+                <input onChange={onChangeValue} type="number" value={value} className="dark:text-white border rounded-md focus:outline-none dark:bg-dark-600 dark:border-0 bg-steel-100 p-2 pl-32 h-12 w-full" placeholder={0} defaultValue />
                 <div className="flex justify-between ">
                     <div className="dark:border-0 dark:text-white dark:bg-dark-500 border rounded-md bg-white w-28 flex items-center p-2 -mt-12 z-10 relative">
                         <div style={{ display: 'inline-block', maxWidth: '100%', overflow: 'hidden', position: 'relative', boxSizing: 'border-box', margin: 0 }}>
